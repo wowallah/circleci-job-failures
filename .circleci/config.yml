@@ -5,8 +5,8 @@ jobs:
     docker:
       - image: circleci/node:13.8.0
     steps:
-      - run: echo ${NO_ENV}
-      - run: echo "failed"
+      - run: return 1
+      - run: echo "Failed"
           when: on_fail
             
 workflows:
